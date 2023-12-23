@@ -201,7 +201,7 @@ function callMemoData() {
             dateDataArr.forEach(v=>{
                 if(v.attributes[1].value == data.dateData){
                     v.classList.add('check')
-                    v.innerHTML += `<i class="fa-regular fa-note-sticky"></i>`
+                    v.innerHTML += `<i class="fa-regular fa-note-sticky memo"></i>`
                 }
             })
         }
