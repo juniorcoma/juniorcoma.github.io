@@ -259,12 +259,13 @@ makeCalender()
 
 
 const saveBtn = document.querySelector('#save-btn');
-
+const deleteBtn = document.querySelector('#delete-btn')
 function saving(){
     const jsonData = JSON.stringify(imgDataArr)
     localStorage.setItem('data',jsonData)
     alert('저장했습니다')
 }
+
 
 
 window.onload = function(){
@@ -275,4 +276,8 @@ window.onload = function(){
     }
 }
 
-saveBtn.addEventListener('click',saving)
+saveBtn.addEventListener('click',saving);
+deleteBtn.addEventListener('click',()=>{
+    localStorage.removeItem('data')
+    alert('삭제했습니다')
+} )

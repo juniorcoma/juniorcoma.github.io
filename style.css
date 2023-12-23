@@ -42,9 +42,8 @@ a{
     color:#fff;
 }
 
-#save-btn{
+.data-btn{
     position: absolute;
-    bottom: 6%;
     left:55px;
     padding:5px 10px;
     outline: none;
@@ -58,7 +57,16 @@ a{
     transition: .3s;
 }
 
-#save-btn:hover{
+.data-btn.save{
+    bottom:30px;
+    
+}
+
+.data-btn.delete{
+    bottom:90px;
+}
+
+.data-btn:hover{
     color:#fff;
 }
 
