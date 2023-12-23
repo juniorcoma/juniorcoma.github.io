@@ -244,14 +244,17 @@ a{
 
 
 .text-container > .short{
-    margin-top : 320px;
+    margin-top : 40vh;
     font-size: 25px;
+    text-wrap: none;
   
 }
 
 .text-container > .section-title{
     margin-top:8px;
-    font-size: 5.5vw;
+    font-size: 100px;
+    text-shadow: 5px 5px 1px rgba(0,0,0,.7);
+    text-wrap: none;
  
 }
 
@@ -305,6 +308,7 @@ a{
     font-size: 30px;
     font-weight: 300;
     margin-top:8px;
+    text-wrap: none;
 }
 
 .section > .link{
@@ -328,5 +332,8 @@ a{
         margin-top : 240px;
         font-size: 20px;
       
+    }
+    .text-container > .section-title{
+        font-size: 80px;
     }
 }
