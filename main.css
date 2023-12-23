@@ -322,3 +322,10 @@ a{
     border-color:#9a00f8;
 }
 
+@media screen and (max-width : 1600px){
+    .text-container > .short{
+        margin-top : 240px;
+        font-size: 20px;
+      
+    }
+}
