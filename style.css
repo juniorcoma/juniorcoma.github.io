@@ -22,6 +22,11 @@ body{
 a{
     text-decoration: none;
 }
+.help-text{
+    position: absolute;
+    top:70px;
+    left:30px;
+}
 .home-link{
     position: absolute;
     top : 20px;
