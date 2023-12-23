@@ -67,9 +67,14 @@ function makeCalender(count = countNum) {
 
 
 function dateClickEvent(e) {
-    if (e.target.classList.contains('check')) {
+    if (e.target.classList.contains('check') || e.target.classList.contains('memo')) {
         historyModal.classList.add('show')
-        modalInputText(e.target.attributes[1].value)
+        if(e.target.classList.contains('memo')){
+            modalInputText(e.target.parentNode.attributes[1].value)
+        }else{
+            modalInputText(e.target.attributes[1].value)
+        }
+     
     } else {
         [...e.target.parentNode.children].forEach(v => {
 
@@ -154,7 +159,7 @@ function check() {
             v.classList.remove('currentclick');
             if (v.classList.contains('check') === false) {
                 v.classList.add('check');
-                v.innerHTML += `<i class="fa-regular fa-note-sticky"></i>`
+                v.innerHTML += `<i class="fa-regular fa-note-sticky memo"></i>`
             }
         }
     })

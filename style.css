@@ -133,7 +133,9 @@ a{
     width:100px;
     height:100px;
     padding-left: 15px;
-    position: relative; 
+    position: relative;
+    background-color: transparent;
+    z-index: 100; 
 
 }
 .current.date.check > i{
@@ -143,6 +145,8 @@ a{
     transform: translate(-50%, -50%);
     font-size: 2rem;
     color:rgba(0,0,0,.3);
+    z-index: -1;
+    
 }
 
 .current.date.check:hover > i {
