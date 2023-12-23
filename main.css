@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+
+body, html {
+    overflow: hidden;
+  
+}
+a{
+    text-decoration: none;
+    
+}
+
+.ftw-b{
+    font-weight: bold;
+}
+
+.pdd-l{
+    padding-left: 80px;
+}
+
+.section-wrapper {
+    position: relative;
+  
+}
+
+.social-container{
+    position: fixed;
+    bottom:60px;
+    right:60px;
+    z-index: 500;
+    width:50px;
+    height:50px;
+    
+    
+}
+
+
+
+.social-container > .social-icon{
+    cursor: pointer;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    
+    transition: background .3s;
+    position: absolute;
+    transition: .5s;
+}
+
+.social-container > .social-icon.social{
+    background-color: #9a00f8;
+    border: 2px;
+    z-index: 200;
+    box-shadow: 2px 2px 6px rgba(0,0,0,.4);
+}
+
+
+.social-container > .social-icon.social:hover > i{
+    animation: iconhover .8s forwards;
+}
+.social-container > .social-icon.social.show:hover > i{
+    animation: none;
+}
+
+.social-icon.social > .menu{
+    display: block;
+}
+.social-icon.social.show > .menu{
+    display: none;
+}
+.social-icon.social > .cancle{
+    display: none;
+}
+.social-icon.social.show > .cancle{
+    display: block;
+}
+
+.social-icon.show{
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    transition:transform .5s;
+    border: 1px solid #fff;
+    
+}
+
+.social-icon.show.insta{
+   
+    transform: translateX(-90px);
+}
+.social-icon.show.github{
+    transition-delay: .3s;
+    transform: translate(-60px,-60px);
+}
+.social-icon.show.message{
+    transition-delay: .6s;
+    transform: translateY(-90px);
+}
+
+
+
+@keyframes iconhover {
+    0%{
+        transform: rotateY(0);
+    }
+    100%{
+        transform: rotateY(180deg);
+    }
+
+}
+
+.social-container > .social-icon:hover{
+    border:none;
+}
+
+.social-container > .social-icon.insta:hover{
+    background:  radial-gradient(circle farthest-corner at 32% 106%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82%) , linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);
+
+}
+.social-container > .social-icon.github:hover{
+    background:  #000;
+
+}
+
+.social-container > .social-icon.message:hover{
+    background: #6a52f4;
+}
+
+.social-icon i::before{
+    font-size: 1.7rem;
+    color:rgba(255,255,255);
+    background-color: transparent;
+  
+}
+
+
+
+.section-nav{
+
+    position: fixed;
+    top:160px;
+    right:80px;
+    padding:32px 16px;
+    z-index: 500;
+    
+
+}
+
+.section-nav > .move-section:not(:first-child){
+    margin-top: 32px;
+}
+
+.section-nav > .move-section{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 20px;
+    cursor: pointer;
+}
+.section-nav.black > .move-section{
+    color:rgba(0,0,0);
+}
+.section-nav.white > .move-section{
+    color:#fff;
+}
+
+.move-section > .move-btn{
+    display: inline-block;
+    width:20px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    transition:background .3s;
+ 
+   
+}
+
+.section-nav.black > .move-section > .move-btn{
+    background-color: rgba(0,0,0,.3);
+}
+.section-nav.black > .move-section:hover > .move-btn{
+    background-color: rgba(0,0,0);
+}
+.section-nav.black > .move-section > .move-btn.current{
+    background-color: rgba(0,0,0);
+}
+.section-nav.white > .move-section > .move-btn{
+    background-color: rgba(255,255,255,.3);
+}
+.section-nav.white > .move-section:hover > .move-btn{
+    background-color: rgba(255,255,255);
+}
+.section-nav.white > .move-section > .move-btn.current{
+    background-color: rgba(255,255,255);
+}
+
+.move-section > .move-name{
+    visibility: hidden;
+}
+
+.move-section > .move-name.current{
+    visibility: visible;
+}
+
+
+
+.move-section > .move-btn.current{
+    width:48px;
+    height:10px;
+    border-radius: 10px;
+}
+
+.section-wrapper  .section{
+    width:100%;
+    height:100vh;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding:80px;
+    background-size: cover;
+    background-position: center;
+    color:#fff;  
+  
+      
+}
+
+.section-wrapper  .section.first{
+    background-image: url(./img/picture.jpg);
+    
+}
+
+.section-wrapper  .section.second{
+    background-image: url(./img/book.jpg);
+}
+
+.section-wrapper  .section.third{
+    background-image: url(./img/giutar.jpg);
+}
+
+
+.text-container > .short{
+    margin-top : 320px;
+    font-size: 25px;
+  
+}
+
+.text-container > .section-title{
+    margin-top:8px;
+    font-size: 5.5vw;
+ 
+}
+
+.section.first{
+    position: relative;
+}
+
+
+
+.section.first > .arrow-box{
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left:50%;
+    font-size: 35px;
+    color:#fff;
+ 
+}
+
+.section.first > .arrow-box > span{
+    font-size: 1rem;
+}
+
+.section.first > .arrow-box > div{
+    font-size: 35px;
+    animation: downup .9s  infinite;
+}
+
+
+
+@keyframes downup{
+    0%{
+        transform: translateY(-15px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.section.first > .arrow::after{
+    content: 'scroll';
+    font-size: 1rem;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:-30px;
+}
+.text-container > .section-description{
+    font-size: 30px;
+    font-weight: 300;
+    margin-top:8px;
+}
+
+.section > .link{
+    display: inline-block;
+    padding:10px 40px;
+    border-radius:15px ;
+    color:rgba(255, 255, 255);
+    margin : 32px 0 0 80px;
+    font-size: 25px;
+    font-weight: 400;
+    border : 2px solid #fff;
+    transition: .3s;
+}
+
+.section > .link:hover{
+    border-color:#9a00f8;
+}
+
