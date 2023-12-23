@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Calendar</title>
+    <script src="https://kit.fontawesome.com/ea361a6994.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button class="save" id="save-btn" type="button">저장하기</button>
+    <div class="calender-wrapper">
+        
+        <div class="year">
+        </div>
+        <div class="month-control">
+            <button type="button" class="prev btn">&#60;</button>
+
+            <div class="month"></div>
+
+            <button type="button" class="next btn">&#62;</button>
+           
+        </div>
+        <div class="calender-day">
+            <span class="day">SUN</span>
+            <span class="day">MON</span>
+            <span class="day">THU</span>
+            <span class="day">WEN</span>
+            <span class="day">THE</span>
+            <span class="day">FRI</span>
+            <span class="day">SAT</span>
+        </div>
+        <div class="calender-date">
+
+        </div>
+    </div>
+    <div class="modal-picture">
+        <div class="input-date"></div>
+        <form action="" class="submit-form">
+            <div class="preview-picture">
+                <img   class="preview-img"  accept=".png, .jpeg">
+                <label for="img-file">
+                    <span>+</span>
+                </label>
+                <input type="file" id="img-file">
+            </div>
+           
+            <input type="text" class="input img-title" placeholder="사진제목 또는 이 날 있었던 일의 제목" required>
+            <textarea class="input img-description" placeholder='사진을 설명해주세요 또는 이 날의 기록' id="picture-description" rows="3" cols="30" required></textarea>  
+            <button class='btn' id="user-input-submit" type="submit">등록하기</button>
+        </form>
+        <button type="button" class="close-modal">X</button>
+    </div>
+    <div class="history-wrapper">
+        <div class="history-modal">
+            <div class="history-date"></div>
+            <div class="content-box">
+                <span class="content">제목</span>
+                <div class="content title"></div>
+                <span class="content">내용</span>
+                <div class="content description"></div>
+            </div>
+            <span class="history-modal-close">X</span>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
