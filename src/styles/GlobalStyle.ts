@@ -20,14 +20,19 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      
     }
 
     html {
         font-size : 62.5%;
+        background-color : #1f1f1f;
+    
     }
 
     body {
       font-family: 'Pretendard', sans-serif;
+      min-height : 100vh;
+     
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -35,11 +40,28 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     button {
-        
+        background-color : transparent;
+        outline : none;
+        border : none;
+        cursor: pointer;
     }
-
-    canvas {
-      
+    
+    
+   
+    .canvas-container {
+      position : absolute !important;
+      top  : 0;
+      left : 0;
+      z-index : 100000;
     }
+    
+     a {
+      text-decoration : none;
+      display : block;
+     }
 
+     li {
+      list-style : none;
+     }
+ 
 `;
