@@ -19,7 +19,7 @@ export default function ProjectLinkNav({ navList }: ProjectLinkNavProps) {
 
           return (
             <Item key={list.id}>
-              <Link href={list.link}>
+              <Link href={list.link} target="_blank">
                 <LinkImg src={imgSrc} />
                 <span>{list.text}</span>
               </Link>
