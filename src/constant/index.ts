@@ -309,7 +309,7 @@ export const PROJECT_DETAIL_INFO: {} = {
       title: 'Portfolio',
       type: 'Personal',
       shortDescription: '개인 포트폴리오 프로젝트입니다.',
-      previewVideoPath: '',
+      previewVideoPath: '/video/portfolio/portfolio.video.mp4',
     },
     section2: {
       techStackInfo: [
