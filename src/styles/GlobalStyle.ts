@@ -58,6 +58,7 @@ export const GlobalStyle = createGlobalStyle`
      a {
       text-decoration : none;
       display : block;
+      color : inherit;
      }
 
      li {

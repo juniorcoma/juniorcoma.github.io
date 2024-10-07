@@ -26,7 +26,7 @@ const Container = styled.div`
 
 const ImgBox = styled.div`
   width: 100%;
-  min-height: 45rem;
+  height: 45rem;
 `;
 
 const ProJectCoreImg = styled.img`

@@ -11,9 +11,10 @@ interface CoreSectionProps {
       description: string;
     }[];
   };
+  primaryColor: string;
 }
 
-export default function CoreSection({ sectionInfo }: CoreSectionProps) {
+export default function CoreSection({ sectionInfo, primaryColor }: CoreSectionProps) {
   const [coreIndex, setCoreIndex] = useState(0);
   const handleImgControllBtn = (index: number) => {
     setCoreIndex(index);
@@ -29,7 +30,11 @@ export default function CoreSection({ sectionInfo }: CoreSectionProps) {
         <ImgControllBox>
           {sectionInfo.coreList.map((list, index) => (
             <li key={list.id}>
-              <ImgControllBtn $active={index === coreIndex} onClick={() => handleImgControllBtn(index)}>
+              <ImgControllBtn
+                $active={index === coreIndex}
+                onClick={() => handleImgControllBtn(index)}
+                $color={primaryColor}
+              >
                 {list.btnText}
               </ImgControllBtn>
             </li>
@@ -62,7 +67,7 @@ const ImgControllBox = styled.ul`
   gap: 1.6rem;
 `;
 
-const ImgControllBtn = styled.button<{ $active: boolean }>`
+const ImgControllBtn = styled.button<{ $active: boolean; $color: string }>`
   color: #fff;
   font-size: 1.6rem;
   border: 1px solid #fff;
@@ -70,11 +75,11 @@ const ImgControllBtn = styled.button<{ $active: boolean }>`
   padding: 1.2rem 0;
   border-radius: 0.8rem;
 
-  ${({ $active }) =>
+  ${({ $active, $color }) =>
     $active &&
     css`
       border: 1px solid transparent;
-      background-color: #5383e8;
+      background-color: ${$color};
       font-weight: bold;
     `}
 `;
