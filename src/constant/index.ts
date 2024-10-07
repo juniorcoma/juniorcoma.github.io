@@ -1,9 +1,39 @@
 export const HOME_TEXT_RENDER_LIST = [
-  '점들을 이어주세요.',
-  '삼각형이 보이시나요?',
-  '가장 최소한의 점으로 그릴 수 있는 안정적이고 균형잡힌 다각형입니다.',
-  '가장 최소한의 코드로 삼각형을 그릴 수 있는 개발자가 목표인',
+  '점들을 하나씩 이어보세요.',
+  '모든 점을 다 이으셨나요? 이제 무엇이 보이나요?',
+  '혹시 삼각형이 떠오르시나요?',
+  '삼각형은 가장 적은 점으로 그릴 수 있는, 안정적이고 균형잡힌 다각형이자 기하학의 시작입니다.',
+  '이 삼각형들이 모이면 다양한 다각형이 만들어집니다.',
+  '저는 이러한 삼각형처럼 기본을 튼튼히 하며, 성장해나가는 개발자,',
   'Frontend Developer 박현우입니다.',
+];
+
+export const NAV_BAR_LINK_LIST = [
+  {
+    id: 1,
+    text: 'Home',
+    to: '/',
+  },
+  {
+    id: 2,
+    text: 'Content',
+    to: '/content',
+  },
+  {
+    id: 3,
+    text: 'About',
+    to: '/about',
+  },
+  {
+    id: 4,
+    text: 'Project',
+    to: '/project',
+  },
+  {
+    id: 5,
+    text: 'Contact',
+    to: '/contact',
+  },
 ];
 
 export const CONTENT_MENU_TEXT_LIST = [
@@ -160,23 +190,24 @@ export const PROJECT_RENDER_INFO = {
 
 export const PROJECT_DETAIL_INFO: {} = {
   yoogg: {
+    primaryColor: '#5383e8',
     projectNavLinkList: [
       {
         id: 1,
         name: 'github',
-        link: '',
+        link: 'https://github.com/juniorcoma/YOO.GG',
         text: '깃허브',
       },
       {
         id: 2,
         name: 'figma',
-        link: '',
+        link: 'https://www.figma.com/design/9KoKnbwl1rQLt1jzROwTgq/YOO.GG?node-id=0-1&t=9Z1bWV89t5EeZSOe-1',
         text: '디자인',
       },
       {
         id: 3,
         name: 'vercel',
-        link: '',
+        link: 'https://yoo-gg.vercel.app/',
         text: '사이트',
       },
     ],
@@ -210,8 +241,7 @@ export const PROJECT_DETAIL_INFO: {} = {
         {
           id: 4,
           name: 'typescript',
-          reasonUse:
-            '소환사 전적 검색의 경우 더보기라는 버튼으로 추가 전적을 불러오는 로직이 있습니다. 따라서 사용자의 상호작용에 따라 데이터를 불러오는 것이라고 판단하여 react-query를 통해 추가 데이터를 불러올 수 있게 하였습니다.',
+          reasonUse: '',
         },
       ],
     },
@@ -260,17 +290,18 @@ export const PROJECT_DETAIL_INFO: {} = {
     },
   },
   portfolio: {
+    primaryColor: '#FF8C00',
     projectNavLinkList: [
       {
         id: 1,
         name: 'github',
-        link: '',
+        link: 'https://github.com/juniorcoma/juniorcoma.github.io',
         text: '깃허브',
       },
       {
         id: 2,
         name: 'vercel',
-        link: '',
+        link: 'https://juniorcoma.github.io/',
         text: '사이트',
       },
     ],
@@ -285,14 +316,12 @@ export const PROJECT_DETAIL_INFO: {} = {
         {
           id: 1,
           name: 'react',
-          reasonUse:
-            'YOO.GG는 서비스를 제공하기 위해 다양한 Riot api를 사용하고 있습니다. 그 중 챔피언 데이터, 룬데이터, 스펠 데이터 등 많은 정적 자원을 요청하는 부분이 많기 때문에 Next.js의',
+          reasonUse: '',
         },
         {
           id: 2,
           name: 'styledcomponent',
-          reasonUse:
-            'YOO.GG는 서비스를 제공하기 위해 다양한 Riot api를 사용하고 있습니다. 그 중 챔피언 데이터, 룬데이터, 스펠 데이터 등 많은 정적 자원을 요청하는 부분이 많기 때문에 Next.js의',
+          reasonUse: '',
         },
       ],
     },
@@ -300,9 +329,37 @@ export const PROJECT_DETAIL_INFO: {} = {
       coreList: [
         {
           id: 1,
-          btnText: '메인화면 canvas',
-          imgSrc: '/assets/images/project/yoogg/core/1.png',
-          description: '다크 모드를 구현함으로써 사용자에게 보다 편리하고 쾌적한 경험을 제공하였습니다.',
+          btnText: '메인화면 Canvas',
+          imgSrc: '/assets/images/project/portfolio/core/1.png',
+          description:
+            '메인화면 Canvas는 세 개의 점이 돌아다니며 사용자의 상호작용을 통한 선그리그를 구현하였습니다. 또한 각 점에서 나온 변의 수가 2개가 된다면 다음으로 넘어가기 위한 장면이 나옵니다.',
+        },
+        {
+          id: 2,
+          btnText: '메뉴 Canvas',
+          imgSrc: '/assets/images/project/portfolio/core/2.png',
+          description:
+            '메뉴 페이지의 Canvas는 점들이 돌아다니며 점과 점사이의 거리가 100이하가 되면 점과 점사이에 선을 그리게 됩니다. 또한 Content는 svg를 활용하여 hover했을 때 애니메이션 효과를 추가하였습니다.',
+        },
+        {
+          id: 3,
+          btnText: '프로젝트 리스트',
+          imgSrc: '/assets/images/project/portfolio/core/3.png',
+          description:
+            '프로젝트 리스트 페이지는 삼각형을 이용하여 삼각형은 개인 프로젝트, 삼각형이 모여 이루어진 사면체는 팀 프로젝트로 구상하여 디자인 하였습니다.',
+        },
+        {
+          id: 4,
+          btnText: '프로젝트 페이지',
+          imgSrc: '/assets/images/project/portfolio/core/4.png',
+          description:
+            '프로젝트 페이지에서 각 프로젝트의 PrimaryColor를 설정하여, 각 프로젝트마다 고유한 시각적 정체성을 부여하고자 했습니다. 이를 통해 사용자는 각 프로젝트를 쉽게 구분할 수 있으며, 각 프로젝트의 개성을 색상으로도 느낄 수 있습니다. ',
+        },
+        {
+          id: 5,
+          btnText: '프로젝트 기능 컨테이너',
+          imgSrc: '/assets/images/project/portfolio/core/5.png',
+          description: '프로젝트의 핵심기능을 간편하게 볼 수 있도록 하였습니다.',
         },
       ],
     },
@@ -311,31 +368,26 @@ export const PROJECT_DETAIL_INFO: {} = {
     },
   },
   vanillacomp: {
+    primaryColor: '#FFD700',
     projectNavLinkList: [
       {
         id: 1,
         name: 'github',
-        link: '',
+        link: 'https://github.com/juniorcoma/vanillaComponentProject',
         text: '깃허브',
       },
       {
         id: 2,
         name: 'figma',
-        link: '',
+        link: 'https://www.figma.com/design/XStEBdVYnHckc9jeSTJMKS/Portfolio?node-id=0-1&t=XphlS0NrWAHpH8wd-1',
         text: '디자인',
-      },
-      {
-        id: 3,
-        name: 'vercel',
-        link: '',
-        text: '사이트',
       },
     ],
     section1: {
       title: 'VanillaComp',
       type: 'Personal',
       shortDescription: 'React와 유사한 컴포넌트 구조를 순수 자바스크립트로 구현한 프로젝트입니다.',
-      previewVideoPath: '',
+      previewVideoPath: '/video/vanillacomp/vanillacomp.video.mp4',
     },
     section2: {
       techStackInfo: [
@@ -351,9 +403,33 @@ export const PROJECT_DETAIL_INFO: {} = {
       coreList: [
         {
           id: 1,
-          btnText: '다크 모드',
-          imgSrc: '/assets/images/project/yoogg/core/1.png',
-          description: '다크 모드를 구현함으로써 사용자에게 보다 편리하고 쾌적한 경험을 제공하였습니다.',
+          btnText: 'JS class문법사용',
+          imgSrc: '/assets/images/project/vanillacomp/core/1.png',
+          description: 'JS의 class문법을 사용하여 React의 component 패턴을 흉내내었습니다.',
+        },
+        {
+          id: 2,
+          btnText: 'map함수를 이용한 렌더링',
+          imgSrc: '/assets/images/project/vanillacomp/core/2.png',
+          description: 'map함수를 이용하여 react의 map을 이용한 렌더링 방식을 구현해보았습니다.',
+        },
+        {
+          id: 3,
+          btnText: '카드 공통컴포넌트',
+          imgSrc: '/assets/images/project/vanillacomp/core/3.png',
+          description: '프로젝트 카드를 공통 컴포넌트로 구현하였습니다.',
+        },
+        {
+          id: 4,
+          btnText: '이미지 슬라이더',
+          imgSrc: '/assets/images/project/vanillacomp/core/4.png',
+          description: '이미지 슬라이더는 프로젝트 카드 컴포넌트에서 따로 분리하여 관리하였습니다.',
+        },
+        {
+          id: 5,
+          btnText: '반응형',
+          imgSrc: '/assets/images/project/vanillacomp/core/5.png',
+          description: '반응형 웹을 구축하여 사용자의 다양한 기기에서 최적화된 화면을 제공했습니다.',
         },
       ],
     },
@@ -362,24 +438,19 @@ export const PROJECT_DETAIL_INFO: {} = {
     },
   },
   pickletime: {
+    primaryColor: '#5DC26D',
     projectNavLinkList: [
       {
         id: 1,
         name: 'github',
-        link: '',
+        link: 'https://github.com/Splint-Final-Project/Pickle-Time-Frontend',
         text: '깃허브',
       },
       {
         id: 2,
         name: 'figma',
-        link: '',
+        link: 'https://www.figma.com/design/KrG2R6jbUc0VORePSHZp6j/Pickle-Time?node-id=0-1&t=x5VXFlK3YsLEWcjE-1',
         text: '디자인',
-      },
-      {
-        id: 3,
-        name: 'vercel',
-        link: '',
-        text: '사이트',
       },
     ],
     section1: {
@@ -394,20 +465,23 @@ export const PROJECT_DETAIL_INFO: {} = {
         {
           id: 1,
           name: 'react',
-          reasonUse:
-            'YOO.GG는 서비스를 제공하기 위해 다양한 Riot api를 사용하고 있습니다. 그 중 챔피언 데이터, 룬데이터, 스펠 데이터 등 많은 정적 자원을 요청하는 부분이 많기 때문에 Next.js의',
+          reasonUse: '',
         },
         {
           id: 2,
           name: 'styledcomponent',
-          reasonUse:
-            'YOO.GG는 서비스를 제공하기 위해 다양한 Riot api를 사용하고 있습니다. 그 중 챔피언 데이터, 룬데이터, 스펠 데이터 등 많은 정적 자원을 요청하는 부분이 많기 때문에 Next.js의',
+          reasonUse: '',
         },
         {
           id: 3,
           name: 'zustand',
           reasonUse:
-            'YOO.GG는 서비스를 제공하기 위해 다양한 Riot api를 사용하고 있습니다. 그 중 챔피언 데이터, 룬데이터, 스펠 데이터 등 많은 정적 자원을 요청하는 부분이 많기 때문에 Next.js의',
+            'Pickle Time에서는 bottom modal과 피클 생성 단계 정보를 전역적으로 관리합니다. 따라서 이를 전역 상태를 보다 쉽고 간편하게 관리하기 위해 zustand를 사용합니다.',
+        },
+        {
+          id: 3,
+          name: 'reactquery',
+          reasonUse: '',
         },
       ],
     },
@@ -415,9 +489,51 @@ export const PROJECT_DETAIL_INFO: {} = {
       coreList: [
         {
           id: 1,
-          btnText: '다크 모드',
-          imgSrc: '/assets/images/project/yoogg/core/1.png',
-          description: '다크 모드를 구현함으로써 사용자에게 보다 편리하고 쾌적한 경험을 제공하였습니다.',
+          btnText: '검색해서 피클 찾기',
+          imgSrc: '/assets/images/project/pickletime/core/1.gif',
+          description: '피클 제목으로 검색하여 사용자가 원하는 피클들을 찾을 수 있습니다.',
+        },
+        {
+          id: 2,
+          btnText: '내 프로필 수정',
+          imgSrc: '/assets/images/project/pickletime/core/2.gif',
+          description: '사용자가 생성했던 프로필을 수정할 수 있습니다.',
+        },
+        {
+          id: 3,
+          btnText: '내 피클 목록 확인',
+          imgSrc: '/assets/images/project/pickletime/core/3.gif',
+          description: '진행전, 진행중, 종료된 피클들 목록을 확인할 수 있으며 오늘의 피클을 확인 할 수 있습니다.',
+        },
+        {
+          id: 4,
+          btnText: '마이페이지 확인',
+          imgSrc: '/assets/images/project/pickletime/core/4.gif',
+          description: '마이페이지를 확인하여 사용자의 현재 정보를 확인 할 수 있습니다.',
+        },
+        {
+          id: 5,
+          btnText: '미로그인시',
+          imgSrc: '/assets/images/project/pickletime/core/5.gif',
+          description: '미로그인 상태에서 서비스를 이용할려고 하는 경우 로그인 창으로 리다이렉트 됩니다.',
+        },
+        {
+          id: 6,
+          btnText: '지도 탐색',
+          imgSrc: '/assets/images/project/pickletime/core/6.gif',
+          description: '지도를 탐색을 통해 좀 더 쉽게 피클들을 찾을 수 있고 신청할 수 있습니다.',
+        },
+        {
+          id: 7,
+          btnText: '피클 생성',
+          imgSrc: '/assets/images/project/pickletime/core/7.gif',
+          description: 'AI를 도입하여 이미지를 생성하여 사용자가 피클 생성을 더 간편하게 할 수 있게 하였습니다.',
+        },
+        {
+          id: 8,
+          btnText: '피클 수정',
+          imgSrc: '/assets/images/project/pickletime/core/8.gif',
+          description: '피클을 생성한 상태에서 사용자가 다시 수정할 수 있게 함으로써 사용자의 편의성을 높였습니다.',
         },
       ],
     },
@@ -426,17 +542,18 @@ export const PROJECT_DETAIL_INFO: {} = {
     },
   },
   danchoo: {
+    primaryColor: '#1160da',
     projectNavLinkList: [
       {
         id: 1,
         name: 'github',
-        link: '',
+        link: 'https://github.com/5-PS/DANCHOO',
         text: '깃허브',
       },
       {
         id: 3,
         name: 'vercel',
-        link: '',
+        link: 'https://the-julge.netlify.app/',
         text: '사이트',
       },
     ],
@@ -444,27 +561,24 @@ export const PROJECT_DETAIL_INFO: {} = {
       title: 'Danchoo',
       type: 'Team',
       shortDescription: '가게에 급한 일손이 필요한 경우 더 높은 페이를 주고 일손을 매칭시켜주는 서비스입니다.',
-      previewVideoPath: '',
+      previewVideoPath: '/video/danchoo/danchoo.video.mp4',
     },
     section2: {
       techStackInfo: [
         {
           id: 1,
           name: 'next',
-          reasonUse:
-            'YOO.GG는 서비스를 제공하기 위해 다양한 Riot api를 사용하고 있습니다. 그 중 챔피언 데이터, 룬데이터, 스펠 데이터 등 많은 정적 자원을 요청하는 부분이 많기 때문에 Next.js의',
+          reasonUse: '',
         },
         {
           id: 2,
           name: 'tailwind',
-          reasonUse:
-            'YOO.GG는 서비스를 제공하기 위해 다양한 Riot api를 사용하고 있습니다. 그 중 챔피언 데이터, 룬데이터, 스펠 데이터 등 많은 정적 자원을 요청하는 부분이 많기 때문에 Next.js의',
+          reasonUse: '',
         },
         {
           id: 3,
           name: 'typescript',
-          reasonUse:
-            'YOO.GG는 서비스를 제공하기 위해 다양한 Riot api를 사용하고 있습니다. 그 중 챔피언 데이터, 룬데이터, 스펠 데이터 등 많은 정적 자원을 요청하는 부분이 많기 때문에 Next.js의',
+          reasonUse: '',
         },
       ],
     },
@@ -472,9 +586,46 @@ export const PROJECT_DETAIL_INFO: {} = {
       coreList: [
         {
           id: 1,
-          btnText: '다크 모드',
-          imgSrc: '/assets/images/project/yoogg/core/1.png',
-          description: '다크 모드를 구현함으로써 사용자에게 보다 편리하고 쾌적한 경험을 제공하였습니다.',
+          btnText: '회원가입',
+          imgSrc: '/assets/images/project/danchoo/core/1.png',
+          description: '회원가입시 기업과 취준생을 선택하여 회원가입을 할 수 있습니다.',
+        },
+        {
+          id: 2,
+          btnText: '맞춤공고, 전체 공고',
+          imgSrc: '/assets/images/project/danchoo/core/2.png',
+          description: '전체 공고와 자신이 정한 선호지역에 따라 맞춤공고를 제공합니다.',
+        },
+        {
+          id: 3,
+          btnText: '프로필 등록',
+          imgSrc: '/assets/images/project/danchoo/core/3.png',
+          description: '프로필을 등록할 수 있으며 자신이 신청한 공고에 대한 상태를 확인할 수 있습니다.',
+        },
+        {
+          id: 4,
+          btnText: '검색',
+          imgSrc: '/assets/images/project/danchoo/core/4.png',
+          description: '공고를 검색하여 자신이 찾고 있는 공고를 바로 찾을 수 있습니다.',
+        },
+        {
+          id: 5,
+          btnText: '필터',
+          imgSrc: '/assets/images/project/danchoo/core/5.png',
+          description: '공고를 필터링하여 사용자가 원하는 공고를 찾아볼 수 있습니다.',
+        },
+        {
+          id: 6,
+          btnText: '기업정보 등록',
+          imgSrc: '/assets/images/project/danchoo/core/6.png',
+          description: '기업회원은 기업정보를 등록할 수 있으며 기업 정보를 편집하거나 공고를 등록할 수 있습니다.',
+        },
+        {
+          id: 7,
+          btnText: '공고 확인',
+          imgSrc: '/assets/images/project/danchoo/core/7.png',
+          description:
+            '올린 공고에서 신청자 목록을 확인할 수 있으며 승인, 거절을 할 수 있습니다. 1명을 승인하게 되면 나머지 신청자들은 자동으로 거절상태가 됩니다.',
         },
       ],
     },
@@ -483,17 +634,18 @@ export const PROJECT_DETAIL_INFO: {} = {
     },
   },
   rolling: {
+    primaryColor: '#ab57ff',
     projectNavLinkList: [
       {
         id: 1,
         name: 'github',
-        link: '',
+        link: 'https://github.com/D5ng/part2-6team-project',
         text: '깃허브',
       },
       {
         id: 3,
         name: 'vercel',
-        link: '',
+        link: 'https://part2-6team-project.vercel.app/',
         text: '사이트',
       },
     ],
@@ -502,21 +654,19 @@ export const PROJECT_DETAIL_INFO: {} = {
       type: 'Team',
       shortDescription:
         '추억의 롤링페이퍼를 오프라인에서 쓰는 것이 아닌 온라인으로 간편하게 작성할 수 있는 플랫폼입니다.',
-      previewVideoPath: '',
+      previewVideoPath: '/video/rolling/rolling.video.mp4',
     },
     section2: {
       techStackInfo: [
         {
           id: 1,
           name: 'react',
-          reasonUse:
-            'YOO.GG는 서비스를 제공하기 위해 다양한 Riot api를 사용하고 있습니다. 그 중 챔피언 데이터, 룬데이터, 스펠 데이터 등 많은 정적 자원을 요청하는 부분이 많기 때문에 Next.js의',
+          reasonUse: '',
         },
         {
           id: 2,
           name: 'styledcomponent',
-          reasonUse:
-            'YOO.GG는 서비스를 제공하기 위해 다양한 Riot api를 사용하고 있습니다. 그 중 챔피언 데이터, 룬데이터, 스펠 데이터 등 많은 정적 자원을 요청하는 부분이 많기 때문에 Next.js의',
+          reasonUse: '',
         },
       ],
     },
@@ -524,9 +674,42 @@ export const PROJECT_DETAIL_INFO: {} = {
       coreList: [
         {
           id: 1,
-          btnText: '다크 모드',
-          imgSrc: '/assets/images/project/yoogg/core/1.png',
-          description: '다크 모드를 구현함으로써 사용자에게 보다 편리하고 쾌적한 경험을 제공하였습니다.',
+          btnText: '인기, 최신 페이퍼 확인',
+          imgSrc: '/assets/images/project/rolling/core/1.png',
+          description:
+            '인기, 최신 롤링 페이퍼를 확인할 수 있습니다. 또한 스켈레톤 UI를 적용함으로써 사용자의 불편을 최소화 하였습니다.',
+        },
+        {
+          id: 2,
+          btnText: '롤링 페이퍼 검색',
+          imgSrc: '/assets/images/project/rolling/core/2.png',
+          description:
+            '롤링 페이퍼 검색 기능을 추가함으로써 사용자에게 원하는 롤링 페이퍼를 더 쉽게 찾을 수 있는 환경을 제공합니다.',
+        },
+        {
+          id: 3,
+          btnText: '페이퍼 메세지 확인',
+          imgSrc: '/assets/images/project/rolling/core/3.png',
+          description: '현재 롤링 페이퍼의 작성된 메세지를 확인 할 수 있습니다.',
+        },
+        {
+          id: 4,
+          btnText: '롤링 페이퍼 작성',
+          imgSrc: '/assets/images/project/rolling/core/4.png',
+          description:
+            'Unsplash API를 이용해 컬러뿐만 아니라 더 다양한 배경을 제공함으로써 사용자에게 더욱 개인화된 경험을 선사합니다.',
+        },
+        {
+          id: 5,
+          btnText: '페이퍼 메세지 작성',
+          imgSrc: '/assets/images/project/rolling/core/5.png',
+          description: ' 메세지 다 작성시 메세지 카드 미리보기 기능을 통해 사용자에게 실시간 확인 기능을 제공합니다. ',
+        },
+        {
+          id: 6,
+          btnText: '메세지 프로필 설정',
+          imgSrc: '/assets/images/project/rolling/core/6.png',
+          description: '프로필 이미지 또한 Unsplash API를 이용해 더 다양한 배경을 제공하였습니다.',
         },
       ],
     },
