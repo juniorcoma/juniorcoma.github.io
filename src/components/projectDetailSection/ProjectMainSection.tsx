@@ -7,9 +7,10 @@ interface ProjectMainSectionProps {
     previewVideoPath: string;
     title: string;
   };
+  primaryColor: string;
 }
 
-export default function ProjectMainSection({ sectionInfo }: ProjectMainSectionProps) {
+export default function ProjectMainSection({ sectionInfo, primaryColor }: ProjectMainSectionProps) {
   return (
     <Section>
       <Container>
@@ -18,10 +19,14 @@ export default function ProjectMainSection({ sectionInfo }: ProjectMainSectionPr
             <span>{sectionInfo.type} Project</span>
             <p>{sectionInfo.shortDescription}</p>
           </ProjectShortSummaryBox>
-          <Title>{sectionInfo.title}</Title>
+          <Title $color={primaryColor}>{sectionInfo.title}</Title>
         </div>
         <VideoBox>
-          <Video src={sectionInfo.previewVideoPath} loop autoPlay muted></Video>
+          {sectionInfo.previewVideoPath === '' ? (
+            <EmptyVideo>미리보기가 제공되지 않습니다!</EmptyVideo>
+          ) : (
+            <Video src={sectionInfo.previewVideoPath} loop autoPlay muted></Video>
+          )}
         </VideoBox>
       </Container>
     </Section>
@@ -44,8 +49,9 @@ const ProjectShortSummaryBox = styled.div`
   }
 `;
 
-const Title = styled.h1`
+const Title = styled.h1<{ $color: string }>`
   font-size: 6.4rem;
+  color: ${({ $color }) => $color};
 `;
 
 const Container = styled.div`
@@ -59,8 +65,19 @@ const Container = styled.div`
 const VideoBox = styled.div`
   flex: 1;
   width: 100%;
+  height: fit-content;
 `;
 
 const Video = styled.video`
   width: 100%;
+`;
+
+const EmptyVideo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.2rem;
+  height: 50rem;
+  border-radius: 1.6rem;
+  border: 1px solid #c3c3c3;
 `;
