@@ -1,14 +1,11 @@
 import styled from 'styled-components';
 
-interface RetrospectiveSectionProps {
-  children: React.ReactNode;
-}
+interface RetrospectiveSectionProps {}
 
-export default function RetrospectiveSection({ children }: RetrospectiveSectionProps) {
+export default function RetrospectiveSection({}: RetrospectiveSectionProps) {
   return (
     <Section>
       <Title>프로젝트 회고록</Title>
-      {children}
     </Section>
   );
 }
