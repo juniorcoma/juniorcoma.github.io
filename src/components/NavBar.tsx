@@ -1,16 +1,28 @@
 import styled from 'styled-components';
 import { NAV_BAR_LINK_LIST } from '../constant';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function NavBar() {
+  const { pathname } = useLocation();
+  console.log(pathname);
   return (
     <Nav>
       <List>
-        {NAV_BAR_LINK_LIST.map(link => (
-          <li key={link.id}>
-            <NavLink to={link.to}>{link.text}</NavLink>
-          </li>
-        ))}
+        {NAV_BAR_LINK_LIST.map(link => {
+          if (link.to === pathname) {
+            return (
+              <li key={link.id}>
+                <span>{link.text}</span>
+              </li>
+            );
+          } else {
+            return (
+              <li key={link.id}>
+                <NavLink to={link.to}>{link.text}</NavLink>
+              </li>
+            );
+          }
+        })}
       </List>
     </Nav>
   );
