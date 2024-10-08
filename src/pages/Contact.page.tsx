@@ -46,14 +46,15 @@ const ContactBox = styled.div`
   width: 50%;
   min-height: 20rem;
   display: flex;
+  justify-content: center;
   gap: 1.6rem;
   z-index: 1000000;
 `;
 
 const Title = styled.h1`
-  font-size: 3.6rem;
+  font-size: 6.4rem;
   font-weight: 400;
-  margin-bottom: 1.6rem;
+  margin-bottom: 3.2rem;
 `;
 
 const Box1 = styled.div``;
@@ -77,6 +78,7 @@ const DirectContactLink = styled.a`
   font-size: 2rem;
   color: inherit;
   display: block;
+  text-align: center;
   margin-bottom: 0.8rem;
   &:hover {
     text-decoration: underline;
