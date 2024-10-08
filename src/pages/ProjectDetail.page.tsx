@@ -14,7 +14,7 @@ export default function ProjectDetailPage() {
     return <div>잘못된 프로젝트 경로입니다.</div>;
   }
 
-  const { section1, section2, section3, projectNavLinkList, primaryColor } =
+  const { type, section1, section2, section3, section4, projectNavLinkList, primaryColor } =
     PROJECT_DETAIL_INFO[projectName as keyof typeof PROJECT_DETAIL_INFO];
   return (
     <Wrap>
@@ -23,7 +23,7 @@ export default function ProjectDetailPage() {
         <ProjectMainSection sectionInfo={section1} primaryColor={primaryColor}></ProjectMainSection>
         <TechStackSection sectionInfo={section2}></TechStackSection>
         <CoreSection sectionInfo={section3} primaryColor={primaryColor} />
-        <RetrospectiveSection />
+        <RetrospectiveSection type={type} sectionInfo={section4} />
       </Main>
     </Wrap>
   );
