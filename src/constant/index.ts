@@ -190,6 +190,7 @@ export const PROJECT_RENDER_INFO = {
 
 export const PROJECT_DETAIL_INFO: {} = {
   yoogg: {
+    type: 'personal',
     primaryColor: '#5383e8',
     projectNavLinkList: [
       {
@@ -238,11 +239,6 @@ export const PROJECT_DETAIL_INFO: {} = {
           reasonUse:
             '소환사 전적 검색의 경우 더보기라는 버튼으로 추가 전적을 불러오는 로직이 있습니다. 따라서 사용자의 상호작용에 따라 데이터를 불러오는 것이라고 판단하여 react-query를 통해 추가 데이터를 불러올 수 있게 하였습니다.',
         },
-        {
-          id: 4,
-          name: 'typescript',
-          reasonUse: '',
-        },
       ],
     },
     section3: {
@@ -288,8 +284,12 @@ export const PROJECT_DETAIL_INFO: {} = {
         },
       ],
     },
+    section4: {
+      link: 'https://developing-gruyere-6ac.notion.site/YOO-GG-119d9094d93e800980a7fade7f37d061?pvs=4',
+    },
   },
   portfolio: {
+    type: 'personal',
     primaryColor: '#FF8C00',
     projectNavLinkList: [
       {
@@ -364,10 +364,11 @@ export const PROJECT_DETAIL_INFO: {} = {
       ],
     },
     section4: {
-      Retrospective: '',
+      link: 'https://developing-gruyere-6ac.notion.site/Portfolio-119d9094d93e805e8dbce90a77a5f797?pvs=4',
     },
   },
   vanillacomp: {
+    type: 'personal',
     primaryColor: '#FFD700',
     projectNavLinkList: [
       {
@@ -434,10 +435,11 @@ export const PROJECT_DETAIL_INFO: {} = {
       ],
     },
     section4: {
-      Retrospective: '',
+      link: 'https://developing-gruyere-6ac.notion.site/VanillaComp-119d9094d93e8044a950dc5ab81c3316?pvs=4',
     },
   },
   pickletime: {
+    type: 'team',
     primaryColor: '#5DC26D',
     projectNavLinkList: [
       {
@@ -465,7 +467,8 @@ export const PROJECT_DETAIL_INFO: {} = {
         {
           id: 1,
           name: 'react',
-          reasonUse: '',
+          reasonUse:
+            'Next.js로 하자는 의견도 있었지만 팀원들과 소통한 결과 React만으로 충분할 것 같다는 판단하에 React만 사용하기로 결정하였습니다.',
         },
         {
           id: 2,
@@ -481,7 +484,7 @@ export const PROJECT_DETAIL_INFO: {} = {
         {
           id: 3,
           name: 'reactquery',
-          reasonUse: '',
+          reasonUse: '피클 생성과 피클 목록을 불러오는 등 다양한 API를 사용하기 때문에 React-query를 사용하였습니다.',
         },
       ],
     },
@@ -538,10 +541,32 @@ export const PROJECT_DETAIL_INFO: {} = {
       ],
     },
     section4: {
-      Retrospective: '',
+      myFeatureList: [
+        {
+          id: 1,
+          feature:
+            '공통 Bottom Sheet Modal을 개발함으로써 사용자에게 일관된 UI 경험을 제공하였습니다. 이 모달은 다양한 상황에서 재사용 가능하도록 설계되어, 애플리케이션 내에서 여러 컴포넌트에서 쉽게 호출할 수 있는 구조를 갖추었습니다. Zustand를 활용하여 모달 상태를 전역으로 관리함으로써, 상태 관리의 복잡성을 줄이고, 컴포넌트 간의 효율적인 데이터 흐름을 유지할 수 있었습니다. 이를 통해 모달의 열림과 닫힘 상태를 중앙에서 관리하며, 다양한 컴포넌트에서 일관된 상태를 유지할 수 있었습니다.',
+        },
+        {
+          id: 2,
+          feature:
+            '메인 페이지의 인기 급상승 피클 UI, 마감 임박 피클 UI를 공통 컴포넌트로 개발하였습니다. 공통 컴포넌트인만큼 재사용성을 중요시하였으며 React의 Suspense와 ErrorBoundary를 직접 구현하여 에러가 발생하거나 로딩 중일때 사용자의 불편을 최소화 하였습니다.',
+        },
+        {
+          id: 3,
+          feature:
+            '피클을 신청하거나 피클을 생성할 때의 마지막 단계인 결제 페이지의 컴포넌트들을 구현하였습니다. 결제하는 디자인은 같기 때문에 범용적으로 사용할 수 있는 이름으로 컴포넌트를 네이밍 하였습니다. 결제 로직도 구현하고 싶었지만 당시 트러블 슈팅으로 저가 구현하지 못해 큰 아쉬움이 남았습니다.',
+        },
+        {
+          id: 4,
+          feature:
+            '내 피클 페이지에 대한 컴포넌트들을 구현하였습니다. 내 피클 카드는 현재 날짜에 맞춰 진행전, 진행중, 종료 중 하나의 상태를 갖게 되어 각 상태마다 UI가 조금씩 다르지만 전체적인 디자인 틀은 같기 때문에 하나의 컴포넌트로 만들어 각 상태에 따라서 그에 맞는 UI가 랜더링 되도록 구현하였습니다.',
+        },
+      ],
     },
   },
   danchoo: {
+    type: 'team',
     primaryColor: '#1160da',
     projectNavLinkList: [
       {
@@ -630,10 +655,42 @@ export const PROJECT_DETAIL_INFO: {} = {
       ],
     },
     section4: {
-      Retrospective: '',
+      myFeatureList: [
+        {
+          id: 1,
+          feature:
+            ' 페이지 FLOW를 설계에 앞장섰습니다.. App router를 사용하여 프로젝트 개발에 앞서 페이지 구조를 명확히 정리함으로써 App router의 폴더구조를 수월하게 설계하여 개발을 시작하였습니다',
+        },
+        {
+          id: 2,
+          feature:
+            ' 페이지네이션 컴포넌트를 구현하였습니다. 재사용되는 컴포넌트이고 로직이 중요한 컴포넌트라고 생각하여페이지네이션 구현 로직은 따로 분리하여 개발을 하였습니다.',
+        },
+        {
+          id: 3,
+          feature:
+            '. 메인 페이지의 필터 컴포넌트를 구현하였습니다. 원래는 버튼과 필터 팝업을 분리하고 상태를 공유하는 식으로 개발을 진행할려고 하였으나 다른 부분에서 사용하는 점이 없다는 것을 고려하여 버튼과 필터 팝업을 합쳐 하나의 컴포넌트로 개발을 진행하였습니다.',
+        },
+        {
+          id: 4,
+          feature:
+            '가게 정보 등록 폼 페이지와 가게 정보 수정 폼 페이지를 개발하였습니다. 폼에 들어가는 Input같은 경우다른 팀원이 만든 공통 Input컴포넌트를 사용하였으며 수정이 필요하다고 생각하는 부분은 팀원과 소통을통해 수정하였습니다. 또한 이미지 업로드는 백엔드에 나와있는 AWS를 이용한 이미지 업로드를 사용하였습니다.',
+        },
+        {
+          id: 5,
+          feature:
+            '내 공고 상세 페이지를 개발하였습니다. 이 페이지의신청자 목록 테이블은 내 프로필의 신청 내역에도사용되고 있어 공통 컴포넌트로 분리하여 진행하였습니다. 또한 테이블의 상태 열에 들어가는 부분은 따로 로직이 들어가야하는 부분이라고 판단하여 컴포넌트로 분리하여 진행하였습니다.',
+        },
+        {
+          id: 6,
+          feature:
+            ' 내 프로필 등록 폼 페이지와 수정 페이지를 개발하였습니다. 상태를 기반으로 하여 한 페이지로 구현할 수도있지만 내 프로필을 등록하는 것과 수정하는 것은 다른 로직이라고 판단하여 각각 다른 페이지로 구현하였습니다.',
+        },
+      ],
     },
   },
   rolling: {
+    type: 'team',
     primaryColor: '#ab57ff',
     projectNavLinkList: [
       {
@@ -714,7 +771,22 @@ export const PROJECT_DETAIL_INFO: {} = {
       ],
     },
     section4: {
-      Retrospective: '',
+      myFeatureList: [
+        {
+          id: 1,
+          feature: '버튼 공통 컴포넌트를 개발하였습니다.',
+        },
+        {
+          id: 2,
+          feature:
+            ' 롤링 메세지 작성 폼 페이지를 개발하였습니다.React-quill을 사용하여 메세지 작성 폼을 구현하였습니다.또한, 완성된 메세지를 볼 수 있으면 사용자 경험을 향상 시킬 수 있다고 생각하여 메세지 폼을 작성완료하면 폼 제출전에 완성된 메세지 UI를 구현함으로써 사용자에게 직관적이고 편리한 메시지 작성 과정을 제공할 수 있었습니다.',
+        },
+        {
+          id: 3,
+          feature:
+            '롤링 페이퍼 리스트 페이지의 롤링 리스트 컴포넌트의 초기 로딩시 스켈레톤 UI를 적용함으로써 사용자에게 로딩시간에 대한 불편을 최소화 하였습니다',
+        },
+      ],
     },
   },
 };
