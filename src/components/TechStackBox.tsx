@@ -33,21 +33,6 @@ const TechGroupText = styled.h3`
 const TechStatckBox = styled.ul`
   display: flex;
   gap: 0.8rem;
-`;
 
-const TechCard = styled.li`
-  width: fit-content;
-  min-width: 10rem;
-  padding: 1.2rem;
-  border-radius: 1.6rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-  background-color: #31313c;
-  font-size: 1.6rem;
-`;
-const TechLogoImg = styled.img`
-  width: 4rem;
-  aspect-ratio: 1/1;
+  flex-wrap: wrap;
 `;

@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 export default function NavBar() {
   const { pathname } = useLocation();
-  console.log(pathname);
+
   return (
     <Nav>
       <List>
@@ -35,6 +35,9 @@ const Nav = styled.nav`
   left: 3.2rem;
   color: #fff;
   z-index: 1000001;
+  @media (max-width: 1080px) {
+    display: none;
+  }
 `;
 
 const List = styled.ul`

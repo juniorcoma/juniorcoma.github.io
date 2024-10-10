@@ -26,6 +26,11 @@ const TechCard = styled.div`
   gap: 0.8rem;
   background-color: #31313c;
   font-size: 1.6rem;
+  height: fit-content;
+
+  & > span {
+    text-overflow: clip;
+  }
 `;
 const TechLogoImg = styled.img`
   width: 4rem;

@@ -22,11 +22,14 @@ const Container = styled.div`
   gap: 3.2rem;
   font-size: 1.6rem;
   flex: 1;
+  @media (max-width: 1080px) {
+    flex: 0;
+  }
 `;
 
 const ImgBox = styled.div`
   width: 100%;
-  height: 45rem;
+  aspect-ratio: 1.62/1;
 `;
 
 const ProJectCoreImg = styled.img`

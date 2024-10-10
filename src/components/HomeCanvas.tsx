@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import * as fabric from 'fabric'; // v6
+import styled from 'styled-components';
 
 interface CanvasProps {
   setTextVisible: React.Dispatch<React.SetStateAction<boolean>>;
@@ -186,5 +187,11 @@ export default function HomeCanvas({ setTextVisible }: CanvasProps) {
     }
   }, []);
 
-  return <canvas ref={ref} />;
+  return <Canvas ref={ref} />;
 }
+
+const Canvas = styled.canvas`
+  @media (max-width: 1080px) {
+    display: none;
+  }
+`;

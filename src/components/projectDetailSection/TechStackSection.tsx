@@ -27,12 +27,9 @@ export default function TechStackSection({ sectionInfo }: TechStackSectionProps)
     </Section>
   );
 }
-
 const Section = styled.section`
-  width: 108rem;
-  margin: auto;
+  width: 100%;
 `;
-
 const Title = styled.h2`
   font-size: 3.2rem;
   margin-bottom: 3.2rem;
@@ -47,6 +44,12 @@ const Wrap = styled.div`
 const SkillCard = styled.div`
   display: flex;
   gap: 1.2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const ReasonUse = styled.p`

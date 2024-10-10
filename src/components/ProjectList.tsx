@@ -35,8 +35,10 @@ const Container = styled.section`
   display: flex;
   width: 100%;
   height: 25rem;
-  & > * {
-    height: 100%;
+  @media (max-width: 1080px) {
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
   }
 `;
 
@@ -88,6 +90,9 @@ const List = styled.ul`
   display: flex;
   gap: 0.8rem;
   flex: 1;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const ProjectItem = styled.li`

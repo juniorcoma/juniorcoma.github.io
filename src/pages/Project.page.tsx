@@ -21,6 +21,9 @@ const Wrap = styled.div`
   justify-content: center;
   align-items: center;
   color: #fff;
+  @media (max-width: 1080px) {
+    padding: 3.2rem;
+  }
 `;
 
 const ProjectListContainer = styled.main`

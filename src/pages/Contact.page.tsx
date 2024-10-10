@@ -43,7 +43,7 @@ const Wrap = styled.div`
 `;
 
 const ContactBox = styled.div`
-  width: 50%;
+  width: fit-content;
   min-height: 20rem;
   display: flex;
   justify-content: center;

@@ -34,8 +34,7 @@ export default function ProjectMainSection({ sectionInfo, primaryColor }: Projec
 }
 
 const Section = styled.section`
-  width: 108rem;
-  margin: auto;
+  width: 100%;
 `;
 
 const ProjectShortSummaryBox = styled.div`
@@ -52,6 +51,9 @@ const ProjectShortSummaryBox = styled.div`
 const Title = styled.h1<{ $color: string }>`
   font-size: 6.4rem;
   color: ${({ $color }) => $color};
+  @media (max-width: 1080px) {
+    font-size: 3.2rem;
+  }
 `;
 
 const Container = styled.div`

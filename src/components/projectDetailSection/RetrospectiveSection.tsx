@@ -38,9 +38,9 @@ export default function RetrospectiveSection({ type, sectionInfo }: Retrospectiv
 }
 
 const Section = styled.section`
-  width: 108rem;
-  margin: auto;
+  width: 100%;
 `;
+
 const Title = styled.h2`
   font-size: 3.2rem;
   margin-bottom: 3.2rem;

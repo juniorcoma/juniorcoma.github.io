@@ -27,7 +27,6 @@ export default function AboutPage() {
                 사용자와의 거리를 점차 좁혀가는 개발자가 되겠습니다.
               </Description>
             </TextContentBox>
-            <CanvasBox></CanvasBox>
           </ContentWrapper>
         </Section>
         <section>
@@ -54,12 +53,21 @@ const Wrap = styled.div`
   width: 100%;
   min-height: 100vh;
   color: #fff;
+
+  @media (max-width: 768px) {
+    padding: 3.2rem;
+  }
 `;
 
 const Main = styled.main`
   width: 80%;
   margin: auto;
   padding: 6.4rem 0 12.8rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0;
+  }
 `;
 
 const Section = styled.section``;
@@ -74,11 +82,6 @@ const Title = styled.h1`
 const ContentWrapper = styled.div`
   display: flex;
   gap: 3.2rem;
-`;
-
-const CanvasBox = styled.div`
-  min-width: 50rem;
-  height: 50rem;
 `;
 
 const TextContentBox = styled.div``;
@@ -100,4 +103,10 @@ const TechStackContainer = styled.div`
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
   gap: 3.2rem 0;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
 `;

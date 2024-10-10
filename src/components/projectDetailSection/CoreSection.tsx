@@ -46,10 +46,8 @@ export default function CoreSection({ sectionInfo, primaryColor }: CoreSectionPr
 }
 
 const Section = styled.section`
-  width: 108rem;
-  margin: auto;
+  width: 100%;
 `;
-
 const Title = styled.h2`
   font-size: 3.2rem;
   margin-bottom: 3.2rem;
@@ -59,12 +57,19 @@ const Container = styled.div`
   display: flex;
   gap: 6.4rem;
   min-height: 55rem;
+  @media (max-width: 1080px) {
+    flex-direction: column;
+  }
 `;
 
 const ImgControllBox = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  @media (max-width: 1080px) {
+    flex-direction: row;
+    overflow-x: scroll;
+  }
 `;
 
 const ImgControllBtn = styled.button<{ $active: boolean; $color: string }>`

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import * as fabric from 'fabric'; // v6
+import styled from 'styled-components';
 
 export default function HomeCanvas() {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -109,5 +110,11 @@ export default function HomeCanvas() {
     }
   }, []);
 
-  return <canvas ref={ref} />;
+  return <Canvas ref={ref} />;
 }
+
+const Canvas = styled.canvas`
+  @media (max-width: 1080px) {
+    display: none;
+  }
+`;

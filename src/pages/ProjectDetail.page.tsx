@@ -32,6 +32,9 @@ export default function ProjectDetailPage() {
 const Wrap = styled.div`
   min-height: 100vh;
   color: #fff;
+  @media (max-width: 1080px) {
+    padding: 0 3.2rem;
+  }
 `;
 
 const Main = styled.main`
@@ -39,4 +42,10 @@ const Main = styled.main`
   display: flex;
   flex-direction: column;
   gap: 12.8rem;
+  max-width: 108rem;
+  width: 100%;
+  margin: auto;
+  @media (max-width: 1080px) {
+    gap: 3.2rem;
+  }
 `;
