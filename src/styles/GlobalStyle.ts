@@ -32,6 +32,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
       font-family: 'Pretendard', sans-serif;
       min-height : 100vh;
+      color : #fff;
      
     }
 
@@ -64,5 +65,10 @@ export const GlobalStyle = createGlobalStyle`
      li {
       list-style : none;
      }
- 
+
+  @media screen and (max-width : 1080px) {
+    .canvas-container {
+      display : none;
+    }
+  }
 `;
