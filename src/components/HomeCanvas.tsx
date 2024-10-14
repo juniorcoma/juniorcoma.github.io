@@ -70,7 +70,7 @@ export default function HomeCanvas({ setTextVisible }: CanvasProps) {
   };
 
   useEffect(() => {
-    if (ref.current) {
+    if (ref.current && window.innerWidth > 1080) {
       document.body.style.overflow = 'hidden';
       const canvas = new fabric.Canvas(ref.current, {
         width: window.innerWidth,
