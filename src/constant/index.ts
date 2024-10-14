@@ -40,14 +40,32 @@ export const CONTENT_MENU_TEXT_LIST = [
   {
     id: 1,
     text: 'ABOUT',
+    mobile: {
+      to: '/about',
+      text: 'About',
+      iconSrc: '/assets/images/mobile_about.png',
+      description: '상상을 현실로 만드는 프론트엔드 개발자를 소개합니다.',
+    },
   },
   {
     id: 2,
     text: 'PROJECT',
+    mobile: {
+      to: '/project',
+      text: 'Project',
+      iconSrc: '/assets/images/mobile_project.png',
+      description: '저의 프로젝트를 소개합니다.',
+    },
   },
   {
     id: 3,
     text: 'CONTACT',
+    mobile: {
+      to: '/contact',
+      text: 'Contact',
+      iconSrc: '/assets/images/mobile_contact.png',
+      description: '저에게 연락하세요. 함께 이야기해요',
+    },
   },
 ];
 
