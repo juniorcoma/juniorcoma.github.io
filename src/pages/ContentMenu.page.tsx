@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import ContentCanvas from '../components/ContentCanvas';
 import ContentMenuContainer from '../components/ContentMenuContainer';
+import MobileContentMenu from '../components/MobileContentMenu';
 
 export default function ContentMenuPage() {
   return (
@@ -8,6 +9,7 @@ export default function ContentMenuPage() {
       <ContentSection>
         <Title>CONTENT</Title>
         <ContentMenuContainer />
+        <MobileContentMenu />
       </ContentSection>
       <ContentCanvas />
     </Wrap>
@@ -35,4 +37,11 @@ const ContentSection = styled.section`
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
+  @media (max-width: 1080px) {
+    padding: 0 3.2rem;
+    justify-content: flex-start;
+    width: 100%;
+    margin: none;
+    gap: 3.2rem;
+  }
 `;
