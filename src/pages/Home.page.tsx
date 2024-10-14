@@ -58,7 +58,9 @@ const MobileContentBox = styled(ContentBox)`
   padding: 3.2rem 0;
   gap: 3.2rem;
   @media (max-width: 1080px) {
-    display: block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 `;
 
@@ -71,11 +73,11 @@ const MobileTextBox = styled.div`
 `;
 
 const PolyganImg = styled.img`
-  transform-origin: center center;
-  width: 80%;
+  width: 40%;
 `;
 
 const PolyganImgBox = styled.div`
+  max-width: 25.6rem;
   aspect-ratio: 1/1;
   display: flex;
   justify-content: center;
