@@ -19,4 +19,7 @@ const MenuContainer = styled.div`
   margin-bottom: 10vh;
   display: flex;
   justify-content: center;
+  @media (max-width: 1080px) {
+    display: none;
+  }
 `;
